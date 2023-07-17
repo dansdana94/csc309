@@ -9,15 +9,32 @@
     <!-- Select all users and display in a Table -->
     <table>
         <thead>
+          <
             <!-- Complete the table header row -->
         </thead>
 
         <tbody>
-            <?php
+            <?php         
+            include 'process.php' ;
                 // Complete code to:
-                // Connect to the DB
-                // Select all records from users table
-                // Display all the selected records
+                // Connect to the DB  
+                $con =new mysqli($server, $username, $password, $db);
+                // Select all records from users table  
+                $sql = "SELECT * FROM users";
+    $result = mysqli_query($con, $sql);
+
+                // Display all the selected records  
+                while ($row = $result->fetch_assoc()) {
+                    echo "<tr>";
+                    echo "<td>" . $row['firstname'] . "</td>";
+                    echo "<td>" . $row['lastname'] . "</td>";
+                    echo "<td>" . $row['email'] . "</td>";
+                    echo "<td>" . $row['gender'] . "</td>";
+                    echo "<td>" . $row['date_of_birth'] . "</td>";
+                    echo "</tr>";
+      
+         
+                }
             ?>
         </tbody>
     </table>

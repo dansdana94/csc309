@@ -16,6 +16,8 @@
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
     $email = $_POST['email'];
+    $gender = $_POST['Gender'] ;
+    $DOB = $_POST['date_of_birth'] ;
 
     $sql = "INSERT INTO users (firstname, lastname, email) 
     VALUES ('$firstname', '$lastname', '$email')";

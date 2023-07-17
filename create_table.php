@@ -16,10 +16,12 @@
     // Create a Table
     $sql = 'CREATE TABLE users (
         id INT AUTO_INCREMENT PRIMARY KEY,
-        firstname VARCHAR(30) NOT NULL,
         lastname VARCHAR(30) NOT NULL,
-        email VARCHAR(50) NOT NULL UNIQUE
-    )';
+        firstname VARCHAR(30) NOT NULL,
+        Gender CHAR(1) NOT NULL,
+        date_of_birth DATE NOT NULL,
+        email VARCHAR(50) NOT NULL UNIQUE'
+        ;
 
     $result = $con->query($sql);
 
