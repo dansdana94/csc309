@@ -19,8 +19,8 @@
     $gender = $_POST['Gender'] ;
     $DOB = $_POST['date_of_birth'] ;
 
-    $sql = "INSERT INTO users (firstname, lastname, email) 
-    VALUES ('$firstname', '$lastname', '$email')";
+    $sql = "INSERT INTO users (firstname, lastname, email, Gender, date_of_birth) 
+    VALUES ('$firstname', '$lastname', '$email' $gender, $DOB)";
 
     $result = $con->query($sql);
 

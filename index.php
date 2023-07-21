@@ -9,7 +9,12 @@
     <!-- Select all users and display in a Table -->
     <table>
         <thead>
-          <
+          <td>SN</td>
+          <td>Last Name</td>
+          <td>First Name</td>
+          <td>Gender</td>
+          <td>Date Of Birth</td>
+          <td>Email</td>
             <!-- Complete the table header row -->
         </thead>
 
